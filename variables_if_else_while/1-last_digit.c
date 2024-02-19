@@ -11,7 +11,9 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-int last_digit = n % 10;
+/* defining n */
+
+	int last_digit = n % 10;
 
 printf("The string Last digit of %d is %d and is ", n, last_digit);
 
