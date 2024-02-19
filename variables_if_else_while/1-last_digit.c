@@ -20,7 +20,7 @@ printf("greater than 5\n");
 } else if (last_digit == 0)
 {
 printf("0\n");
-} else (last_digit < 6 && lastd !=)
+} else (last_digit < 6 && last_digit !=)
 {
 printf("less than 6 and not 0\n");
 }
