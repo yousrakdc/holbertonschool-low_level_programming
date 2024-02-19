@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf c_correction ; export CFILE=0-main.c ; ./0-preprocessor ; cat c ; rm c
+gcc $CFILE -E -o c
