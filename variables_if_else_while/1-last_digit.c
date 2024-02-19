@@ -21,7 +21,7 @@ else if (n%10 == 0)
 {
 printf("0\n");
 } 
-else (n%10 < 6 && n%10 != 0);
+else (n%10 < 6);
 {
 printf("less than 6 and not 0\n");
 }
