@@ -12,7 +12,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	last_digit = 98;
 
-printf("The string Last digit of %d is %d and is ", n, last_digit);
+printf("Last digit of %d is %d and is ", n, last_digit);
 
 if (last_digit > 5)
 {
