@@ -13,8 +13,6 @@ int main(void)
 
 /* defining n */
 
-	int last_digit = n % 10;
-
 printf("The string Last digit of %d is %d and is ", n, last_digit);
 
 if (last_digit > 5)
