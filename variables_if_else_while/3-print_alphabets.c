@@ -16,7 +16,6 @@ int main(void)
         putchar(letter);
         letter++;
     }
-    putchar('\n');
 
     letter = 'A'; /* Resetting letter to start from 'A' for uppercase letters*/
 
