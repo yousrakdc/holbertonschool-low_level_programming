@@ -10,6 +10,5 @@ int main(void)
 
 {
 	printf("_putchar");
-
 	result (0);
 }
