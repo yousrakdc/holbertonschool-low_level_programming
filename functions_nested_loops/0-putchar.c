@@ -1,14 +1,7 @@
-#include <stdio.h>
+#include "main.h"
 
-/*
- *  * main - print _putchar
- *
- * Return: Always (Success)
- */
-
-int main(void)
-
+/* _putchar - writes the character c to stdout */
+int _putchar(char c)
 {
-	printf("_putchar\n");
-	return (0);
+    return write(1, &c, 1);
 }
