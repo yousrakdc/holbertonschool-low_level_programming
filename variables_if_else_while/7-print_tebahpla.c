@@ -2,15 +2,17 @@
 
 /**
  * main - Entry point
- *
- * Description: Prints the alphabet in reversed in lowercase followed by a new line
+ * Description: Prints the alphabet in reversed in lowercase followed
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	for (letter = 'z'; letter >= 'a'; letter--) 
+	char letter = 'z';
+for 
+	(letter = 'z'; letter >= 'a'; letter--)
 	{
-		putchar(letter);    
+		putchar(letter);
 		putchar('\n');
 	}
 	return (0);
