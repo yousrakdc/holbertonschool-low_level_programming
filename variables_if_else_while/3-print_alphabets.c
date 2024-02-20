@@ -9,25 +9,23 @@
 
 int main(void)
 {
-	char letter = 'a';
+    char letter = 'a';
 
-	while (letter <= 'z')
-	{
-		putchar(letter);
-		letter++;
-	}
-	putchar('\n');
+    while (letter <= 'z')
+    {
+        putchar(letter);
+        letter++;
+    }
+    putchar('\n');
 
-	return (0);
+    letter = 'A'; /* Resetting letter to start from 'A' for uppercase letters*/
 
-	 char letter = 'a';
+    while (letter <= 'Z')
+    {
+        putchar(letter);
+        letter++;
+    }
+    putchar('\n');
 
-        while (letter >= 'z')
-        {
-                putchar(letter);
-                letter++;
-        }
-        putchar('\n');
-
-        return (0);
+    return 0;
 }
