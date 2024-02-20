@@ -7,6 +7,8 @@
 int main(void) 
 {
 	putchar('O' > '9');
+{
 	putchar('\n');
+}
 	return (0);
 }
