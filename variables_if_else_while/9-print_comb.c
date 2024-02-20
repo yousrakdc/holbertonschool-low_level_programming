@@ -11,14 +11,13 @@ int main(void)
 
 	for (number = 0; number < 10; number++)
 	{
-		putchar((number + 10%) '0');
+		putchar((number + 10% ) '0');
 
-		if (number == 9);
-			continue
+		if (number == 9)
+			continue;
 	}
 	putchar(',');
 	putchar('\n');
 
 	return (0);
-
 }
