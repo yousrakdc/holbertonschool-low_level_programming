@@ -6,16 +6,21 @@
  * Return : Always 0
  */
 
-int print_alphabet(void)
-
+void print_alphabet(void)
 {
 	char letter = 'a';
 
 	while (letter <= 'z')
 	{
-		putchar(letter);
+		_putchar(letter);
 		letter++;
 	}
-	putchar('\n');
-	return (0);
+
+	_putchar('\n');
+}
+
+int main()
+{
+	print_alphabet();
+	return 0;
 }
