@@ -7,6 +7,7 @@
  */
 
 int print_alphabet(void);
+
 {
 	char letter = 'a';
 
