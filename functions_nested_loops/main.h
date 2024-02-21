@@ -6,4 +6,4 @@ int _putchar(char c);
 
 #endif /* MAIN_H */
 
-int print_alphabet(void);
+void  print_alphabet(void);
