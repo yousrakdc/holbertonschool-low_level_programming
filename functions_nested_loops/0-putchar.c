@@ -1,10 +1,16 @@
 #include "main.h"
+#include <studio.h>
 
-/* _putchar - writes the character c to stdout */
-int _putchar(char c)
+int main(void)
 {
-    int write = _putchar
+	int i;
+	char chainput[] = "_putchar";
 
-	return (write(1, &c, 1));
-    return (0);
+	for (i = 0; i <= 7; i++)
+	{
+		_putchar(chainput[i]);
+	}
+
+	_putchar('\n');
+	return (0);
 }
