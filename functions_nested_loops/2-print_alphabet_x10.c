@@ -11,7 +11,6 @@ void print_alphabet_x10(void)
 	int i;
 
 	for (i = 0; i < 10; i++)
-	_putchar('\n');
 	{
 		char letter = 'a';
 
@@ -20,6 +19,6 @@ void print_alphabet_x10(void)
 			_putchar(letter);
 			letter++;
 		}
+	_putchar('\n');	
 	}
-	_putchar('\n');
 }
