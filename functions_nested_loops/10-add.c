@@ -3,6 +3,8 @@
 
 /**
  * add - function that adds two integers and returns the result
+ * @a: number
+ * @b: number
  * Return: result
  */
 
