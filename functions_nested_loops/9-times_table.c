@@ -3,44 +3,31 @@
 
 /**
  * times_table - prints the 9 times table, starting with 0
- * @i: row number
- * @j: column number
- * @z: result
  * Return: always success
  */
 
 void times_table(void)
-
 {
-	int i, j, z;
+	int num, mult, prod;
 
-	for (i = 0; i <= 9; i++)
+	for (num = 0; num <= 9; num++)
 	{
-		for (j = 0; j <= 9; j++)
+		_putchar('0');
+
+		for (mult = 1; mult <= 9; mult++)
 		{
-			z = i * j;
+			_putchar(',');
+			_putchar(' ');
 
-			if (z >= 10) 
-			{
-				putchar(z / 10 + '0');
-				putchar(z % 10 + '0');
-			} else
-			{
-				putchar(z + '0');
-			}
+			prod = num * mult;
 
-			if (j < 9)
-			{
-				putchar(',');
-				putchar(' ');
-			}
-			if (z < 10) 
-				putchar(' ');
-			
+			if (prod <= 9)
+				_putchar(' ');
+			else
+				_putchar((prod / 10) + '0');
 
+			_putchar((prod % 10) + '0');
 		}
-		putchar('\n');
-
+		_putchar('\n');
 	}
-
 }
