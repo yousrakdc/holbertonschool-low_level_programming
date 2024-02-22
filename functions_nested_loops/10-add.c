@@ -6,14 +6,10 @@
  * Return: result
  */
 
-int add(int, int)
+int add(int a, int b)
 
 {
-	int number 1, number 2, sum
 
-	sum = number1 + number2;
-
-
-	return (0);
+	return (a + b);
 
 }
