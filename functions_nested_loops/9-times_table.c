@@ -38,4 +38,7 @@ void times_table(void)
 
 		}
 	}
+
+	putchar(( i <= 9); '$');
+	putchar(( j <= 9); '$');
 }
