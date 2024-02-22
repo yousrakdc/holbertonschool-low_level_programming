@@ -14,7 +14,7 @@ void print_to_98(int n)
 
 		for (i = n; i <= 98; i++)
 		{
-			putchar('i');
+			putchar(n);
 			putchar(',');
 			putchar(' ');
 		}
