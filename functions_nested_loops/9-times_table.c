@@ -3,23 +3,19 @@
 
 /**
  * times_table - prints the 9 times table, starting with 0
+ * @n:  number 
  * Return: always success
  */
 
 void times_table(void)
 
-{
-	int i, j;
+}
+	int n;
 
-	for (i = 1; i <= 9; i++)
+	for (int i = 1; i <= 9; ++i)
 	{
-		for (j = 1; j <= 9; j++)
-		{
-			printf("%3d", i * j);
-			if (j < 9)
-			{
-				printf(",..");
-			}
-		}
+	printf("%d * %d = %d \n", n, i, n * i);
 	}
+
+	return 0;
 }
