@@ -35,9 +35,10 @@ void times_table(void)
 				putchar(' ');
 				if (z < 10) putchar(' ');
 			}
-			putchar('\n');
 
 		}
+		putchar('\n');
+
 	}
 
 }
