@@ -11,7 +11,7 @@
 void times_table(void)
 
 {
-	char i = row number; j = column number
+	char i = row; j = column
 
 	int result = i * j;
 	if (result >= 9) 
