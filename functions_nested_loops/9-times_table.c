@@ -39,6 +39,6 @@ void times_table(void)
 		}
 	}
 
-	putchar(( i <= 9) + ('$');
-	putchar(( j <= 9) + ('$');
+	putchar(( i <= 9) + ('$\n');
+	putchar(( j <= 9) + ('$\n');
 }
