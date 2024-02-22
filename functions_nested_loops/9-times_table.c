@@ -5,29 +5,30 @@
  * times_table - prints the 9 times table, starting with 0
  * @i: row number
  * @j: column number
+ * @z: result
  * Return: always success
  */
 
 void times_table(void)
 
 {
-	char i = row; j = column
+	char i = row; j = column; z = result;
 
-	int result = i * j;
-	if (result >= 9) 
+	int z = i * j;
+	if (z >= 9) 
 	{
-		putchar(result / 10 + '0');
-		putchar(result % 10 + '0');
+		putchar(z / 10 + '0');
+		putchar(z % 10 + '0');
 	} else
 	{
-		putchar(result + '0');
+		putchar(z + '0');
 	}
 
 	if (j < 9)
 	{
 		putchar(',');
 		putchar(' ');
-		if (result < 10) putchar(' ');
+		if (z < 10) putchar(' ');
 	}
 
 	putchar('$');
