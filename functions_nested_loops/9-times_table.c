@@ -10,7 +10,10 @@
 
 void times_table(void)
 
-{	int result = i * j;
+{
+	char i = row number; j = column number
+
+	int result = i * j;
 	if (result >= 9) 
 	{
 		putchar(result / 10 + '0');
