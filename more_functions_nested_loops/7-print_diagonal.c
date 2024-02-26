@@ -3,16 +3,16 @@
 
 /**
  * print_diagonal - draws a diagonal line on the terminal
- * @n: a number
+ * @l: limit
  * Result: always success
  */
 
 void print_diagonal(int n)
 
 {
-	int i;
+	int i, l;
 
-	if (n <= 0)
+	if (n < 1)
 	{
 		_putchar('\n');
 		return;
@@ -20,7 +20,7 @@ void print_diagonal(int n)
 
 	for (i = 1 ; i < n ; i++)
 	{
-		for (n = 0; n < i; n++)
+		for (l = 0; l < i; l++)
 		{
 			_putchar(' ');
 		}
