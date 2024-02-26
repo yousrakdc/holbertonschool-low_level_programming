@@ -12,11 +12,10 @@ void print_numbers(void)
 {
 	char n = '0';
 
-	while
-		(n <= 57)
+	while (n <= 57)
 	{
 		putchar(n);
 		n++;
 	}
-	putchar ('\n');
+putchar ('\n');
 }
