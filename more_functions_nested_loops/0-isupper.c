@@ -11,14 +11,12 @@ int _isupper(int c)
 {
 	if
 
-		(c >= 65)
+		((c >= 65) || (c >= 32 && c <= 126))
 		{
 			return (1);
 		}
-	if else
-		(c >= 32 && c <= 126);
-		
-		return (0);
+
+	return (0);
 	
 
 }
