@@ -3,7 +3,7 @@
 
 /**
  * print_square - prints a square
- * @n: a number
+ * @size: size
  * Result: always success
  */
 
