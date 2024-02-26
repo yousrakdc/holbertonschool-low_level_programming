@@ -3,7 +3,7 @@
 
 /**
  * print_diagonal - draws a diagonal line on the terminal
- * @l: limit
+ * @n: number
  * Result: always success
  */
 
