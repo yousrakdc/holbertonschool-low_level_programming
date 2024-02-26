@@ -9,8 +9,8 @@
 int _isupper(int c)
 
 {
-	if 
-	
+	if
+
 		(c > +67 && c <= 99)
 		{
 			return (1);
