@@ -18,13 +18,13 @@ void print_square(int size)
 		return;
 	}
 
-	for (i = 0 ; i < n ; i++)
+	for (i = 0 ; i < size ; i++)
 	{
-		for (n = 4; n < i; n++)
+		for (n = 4; n < size; n++)
 		{
 			_putchar('#');
 		}
-		_putchar('#');
 		_putchar('\n');
+
 	}
 }
