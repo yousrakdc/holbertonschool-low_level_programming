@@ -10,7 +10,7 @@ int _atoi(char *s)
 
 {
 	s = " -9885";
-	i = atoi(s);
+	i = _atoi(s);
 
 	printf("i = %d\n",i);
 }
