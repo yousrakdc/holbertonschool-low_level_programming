@@ -3,7 +3,10 @@
 
 /**
  * *_strncpy - function that copies a string
- * Return: copuy of the string
+ * @dest: destination
+ * @src: source
+ * @n: integer
+ * Return: copy of the string
  */
 
 char *_strncpy(char *dest, char *src, int n)
@@ -23,5 +26,5 @@ char *_strncpy(char *dest, char *src, int n)
 		n--;
 	}
 
-	return start;
+	return (start);
 }
