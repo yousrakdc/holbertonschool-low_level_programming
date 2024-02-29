@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <cstyle.h>
 
 /**
  * string_toupper - Convert a string to uppercase
@@ -15,9 +14,9 @@ char *string_toupper(char *p)
 
 	for (i = 0; p[i] != '\0'; i++)
 	{
-		if (p[i] >= 'p' && p[i] <= 'z')
+		if (p[i] >= 'a' && p[i] <= 'z')
 		{
-			p[i] = p[i] - 32;
+			p[i] = p[i] - ('a' - 'A');
 		}
 	}
 
