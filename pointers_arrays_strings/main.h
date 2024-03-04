@@ -16,3 +16,4 @@ int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
 char *string_toupper(char *);
 char *leet(char *);
+char *_memset(char *s, char b, unsigned int n);
