@@ -21,8 +21,9 @@ int factorial(int n)
 	else 
 	{
 		int result = 1;
+		int i;
 
-		for (int i = 1; i <= n; i++) 
+		for (i = 1; i <= n; i++) 
 		{
 			result *= i;
 		}
