@@ -12,7 +12,7 @@
 int is_prime_number_helper(int n, int base_num)
 
 {
-	if (base % n == 0 || base_num < 2)
+	if (base_num % n == 0 || base_num < 2)
 		return (0);
 	else if (n == base_num -1)
 			return (1);
@@ -30,5 +30,5 @@ int is_prime_number_helper(int n, int base_num)
 int is_prime_number(int n)
 
 {
-	return (is_prime_number_helper(n, n - 1));
+	return (is_prime_number_helper(2, n));
 }
