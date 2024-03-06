@@ -31,4 +31,5 @@ int is_prime_number_helper(int n, int i)
 int is_prime_number(int n)
 
 {
-	return (s_prime_number_helper(n, n - 1));
+	return (is_prime_number_helper(n, n - 1));
+}
