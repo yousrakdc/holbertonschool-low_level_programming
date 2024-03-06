@@ -10,36 +10,24 @@
  * Return: If n does not have a natural square root, return -1
  */
 
-int _sqrt_recursion_helper(int n, int low, int high)
+int _sqrt_recursion_helper(int n, int base_num)
 
 {
-	int mid, square;
-
-	if (low > high)
-	{
-		return (-1);
-	}
-
-	mid = low + (high - low) / 2;
-	square = mid * mid;
-
-	if (square == n)
-	{
-		return (mid);
-	}	else if (square < n)
-	{
-		return (_sqrt_recursion_helper(n, mid + 1, high));
-	}
-	return (_sqrt_recursion_helper(n, low, mid - 1));
-}
-
-int _sqrt_recursion(int n)
-
-{
-	if (n < 0)
-		return (-1);
-	else if (n == 0 || n == 1)
+	if (n * n == base_num)
 		return (n);
-	else
-		return (_sqrt_recursion_helper(n, 0, n));
+	if (n * n > base_num)
+		return (-1);
+	return (_sqrt_recursion_helper(n + 1, base_num));
+}
+	
+/**
+ * _sqrt_recursion - natural square root of a number
+ * @n: number to check
+ * Return: If n does not have a natural square root, return -1
+ */
+
+	int _sqrt_recursion(int n)
+
+{
+		return (_sqrt_recursion_helper(1, n));
 }
