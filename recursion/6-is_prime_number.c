@@ -26,4 +26,5 @@ int is_prime_number(int n)
 		{
 			return (is_prime_number(n, i - 1));
 		}
+	}
 }
