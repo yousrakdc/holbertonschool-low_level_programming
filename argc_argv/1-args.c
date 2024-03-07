@@ -7,26 +7,12 @@
  * Return: print a number followed by a new line
  */
 
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 
 {
+	int i;
 
-	int n = 0;
-
-	while (argv[n] != NULL)
-	{
-		n++;
-	}
-
-	while (n > 0)
-	{
-		int digit = n % 10;
-
-		putchar(digit + '0');
-
-		n /= 10;
-	}
-	putchar ('\n');
-
+	for (i =0; i < argc; i++)
+		printf("%s\n", argv[i]);
 	return (0);
 }
