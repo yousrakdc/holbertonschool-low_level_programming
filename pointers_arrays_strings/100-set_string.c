@@ -14,12 +14,17 @@ void set_string(char **s, char *to)
 int main()
 
 {
+	int i;
+
 	char *s = NULL;
 	char str[] = "Bob Dylan";
 
 	set_string(&s, str);
 
-	printf("s: %s\n", s);
-
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		_putchar(s[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
