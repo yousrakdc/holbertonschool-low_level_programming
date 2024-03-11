@@ -6,9 +6,7 @@
 /**
  * _strdup - returns a pointer to a newly allocated space in memory
  * contains a copy of the string given as a parameter
- * @dupe: duplicate
  * @str: string
- *
  * Return: pointer that duplicates the string or NULL
  */
 
