@@ -4,7 +4,8 @@
 
 /**
  * create_array - creates an array of chars, and starts it with a specific char
- * @arr: array
+ * @a: array
+ * @size: size
  * Return: NULL if size = 0 or pointer to the array
  */
 
