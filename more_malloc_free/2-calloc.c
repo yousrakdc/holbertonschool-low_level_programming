@@ -21,6 +21,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
+	if (nmemb > (SIZE_MAX / SIZE))
+	{
+		return (NULL);
+	}
+
 	ptr = calloc((size_t)nmemb, (size_t)size);
 
 	if (ptr == NULL)
