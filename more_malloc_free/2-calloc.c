@@ -27,12 +27,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	ptr = calloc((size_t)nmemb, (size_t)size);
+	ptr = calloc(nmemb, size);
 
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-
 	return (ptr);
 }
