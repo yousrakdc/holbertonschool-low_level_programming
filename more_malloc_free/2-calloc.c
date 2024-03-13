@@ -21,17 +21,23 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-
-	if (nmemb > (SIZE_MAX / size))
+	
+	ptr = malloc(nmemb * size);
 	{
 		return (NULL);
 	}
 
-	ptr = calloc(nmemb, size);
-
 	if (ptr == NULL)
 	{
 		return (NULL);
+	}
+
+	num = 0;
+
+	while (num < nmemb *size)
+	{
+		ptr[num] = 0;
+		num++;
 	}
 	return (ptr);
 }
