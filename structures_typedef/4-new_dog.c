@@ -7,7 +7,7 @@
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
- * Return: Null if it fails
+ * Return: NULL if it fails
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -26,7 +26,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (doggy == NULL)
 		return (NULL);
 
-	doggy->name = malloc(d * sizeof(doggy->name));
+	doggy->name = malloc(d * sizeof(doggy->name + 1));
 
 	if (doggy->name == NULL)
 	{
@@ -36,7 +36,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (i = 0; i < d; i++)
 		doggy->name[i] = name[i];
 
-	doggy->owner = malloc(e * sizeof(doggy->owner));
+	doggy->owner = malloc(e * sizeof(doggy->owner + 1));
 
 	if (doggy == NULL)
 	{
