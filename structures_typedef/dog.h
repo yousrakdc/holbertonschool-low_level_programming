@@ -6,7 +6,7 @@
  * @name: type
  * @age: float
  * @owner: char
- *Description: structure to store dog info
+ * Description: structure to store dog info
  */
 
 struct dog
@@ -15,3 +15,5 @@ struct dog
 	float age;
 	char *owner;
 } dog_a;
+
+#endif
