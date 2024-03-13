@@ -4,8 +4,8 @@
 
 /**
  * create_array - creates an array of chars, and starts it with a specific char
- * @a: array
  * @size: size
+ * @c: char
  * Return: NULL if size = 0 or pointer to the array
  */
 
@@ -19,7 +19,7 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	a = malloc(size);
+	a = malloc(size + 1);
 	if (a == NULL)
 	{
 		return (NULL);
@@ -28,5 +28,7 @@ char *create_array(unsigned int size, char c)
 	{
 		a[i] = c;
 	}
+	a[i] = '\0';
+
 	return (a);
 }
