@@ -14,6 +14,7 @@ int _strlen(char*s)
 	int a;
 
 	for (a = 0; s[a] != '\0'; a++)
+		;
 	return (a);
 }
 
@@ -28,29 +29,20 @@ char *_strdup(char *str)
 
 {
 	char *dupe;
-	int size;
-	int i;
-
+	size_t size;
+	
 	if (str == NULL)
 	{
-		return (NULL);
+		return NULL;
 	}
-
 	size = strlen(str) + 1;
 	dupe = malloc(size * sizeof(char));
-
-	i = 0;
-	while (i < size)
-	{
-
-		if (dupe == NULL)
-		{	
-			return (NULL);
 	
-		}
-		dupe[i] = str[i];
-		i++;
+	if (dupe == NULL)
+	{
+		return NULL;
 	}
 
-	return (dupe);
+	strcpy(dupe, str);
+	return dupe;
 }
