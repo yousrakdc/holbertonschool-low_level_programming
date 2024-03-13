@@ -28,21 +28,28 @@ int _strlen(char*s)
 char *_strdup(char *str)
 
 {
-	char *dupe;
-	size_t size;
-	
+	char *_strdup(char *str)
+{
+	char *ptr;
+	int size;
+	int x;
+
 	if (str == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
-	size = strlen(str) + 1;
-	dupe = malloc(size * sizeof(char));
-	
-	if (dupe == NULL)
-	{
-		return NULL;
-	}
+	size = _strlen(str) + 1;
+	ptr = malloc(size * sizeof(char));
 
-	strcpy(dupe, str);
-	return dupe;
+	x = 0;
+	while (x < size)
+	{
+		if (ptr == NULL)
+		{
+			return (NULL);
+	}
+		ptr[x] = str[x];
+		x++;
+	}
+	return (ptr);
 }
