@@ -4,6 +4,20 @@
 #include <string.h>
 
 /**
+ * _strlen - return length of a string
+ * @s: char
+ * Return: pointer that duplicates the string or NULL
+ */
+
+int _strlen(char*s)
+{
+	int a;
+
+	for (a = 0; s[a] != '\0'; a++)
+	return (a);
+}
+
+/**
  * _strdup - returns a pointer to a newly allocated space in memory
  * contains a copy of the string given as a parameter
  * @str: string
@@ -14,20 +28,29 @@ char *_strdup(char *str)
 
 {
 	char *dupe;
+	int size;
+	int i;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	dupe = (char *)malloc(strlen(str) + 1);
+	size = strlen(str) + 1;
+	dupe = malloc(size * sizeof(char));
 
-	if (dupe == NULL)
+	i = 0;
+	while (i < size)
 	{
-		return (NULL);
-	}
 
-	strcpy(dupe, str);
+		if (dupe == NULL)
+		{	
+			return (NULL);
+	
+		}
+		dupe[i] = str[i];
+		i++;
+	}
 
 	return (dupe);
 }
