@@ -4,41 +4,45 @@
 
 /**
  * new_dog - copy the name of the owner
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
  * Return: Null if it fails
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 
 {
-	if (name == NULL || owner == NULL)
-	{
+	int d, e, i;
+	dog_t *doggy;
+
+	d = e = 0;
+	while (name[d++])
+		;
+	while (owner[e++])
+		;
+	doggy = malloc(sizeof(dog_t));
+	
+	if (doggy == NULL)
 		return (NULL);
-	}
 
-	dog_t *new_dog_ptr;
-		
-	new_dog_ptr = malloc(sizeof(dog_t));
-	if (new_dog_ptr == NULL)
-	{
+	doggy->name = malloc(d * sizeof(doggy->name));
+	
+	if (doggy == NULL)
 		return (NULL);
-	}
+	
+	for (i = 0; i < d; i++)
+		doggy->name[i] = name[i];
 
-	new_dog_ptr->name = strdup(name);
-	if (new_dog_ptr->name == NULL)
-	{
-		free(new_dog_ptr);
+	doggy->age = age;
+
+	doggy->owner = malloc(e * sizeof(doggy->owner));
+	
+	if (doggy == NULL)
 		return (NULL);
-	}
-
-	new_dog_ptr->owner = strdup(owner);
-	if (new_dog_ptr->owner == NULL)
-	{
-		free(new_dog_ptr->name);
-		free(new_dog_ptr);
-		return (NULL);
-	}
-
-	new_dog_ptr->age = age;
-
-	return (new_dog_ptr);
+	
+	for (i = 0; i < e; i++)
+		doggy->owner[i] = owner[i];
+	
+	return (doggy);
 }
