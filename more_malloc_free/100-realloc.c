@@ -4,9 +4,9 @@
 
 /**
  * _realloc - function that reallocates a memory block
- * @ptr: pointer
- * @new_size: new size
- * @old_size: old size
+ * @ptr: pointer to the memory block
+ * @new_size: new size of the memory block
+ * @old_size: old size of the memory block
  * Return: memory block reallocated
  */
 
@@ -17,8 +17,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (ptr == NULL)
 	{
-		new_ptr = malloc(new_size);
-		return (new_ptr);
+		return (malloc(new_size));
 	}
 
 	if (new_size == 0)
@@ -31,7 +30,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		return (ptr);
 	}
-
 	new_ptr = malloc(new_size);
 
 	if (new_ptr == NULL)
