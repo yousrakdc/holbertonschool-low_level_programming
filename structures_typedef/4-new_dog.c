@@ -7,12 +7,8 @@
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
- * @new_dog: new dog
  * Return: pointer to the new dog struct, or NULL if it fails
  */
-dog_t *new_dog(char *name, float age, char *owner);
-char *_strcpy(char *src);
-int _strlen(char *s);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
