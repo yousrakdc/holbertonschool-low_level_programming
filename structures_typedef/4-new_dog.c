@@ -11,19 +11,7 @@
  * Return: pointer to the new dog struct, or NULL if it fails
  */
 dog_t *new_dog(char *name, float age, char *owner);
-
-/**
- * _strcpy - copy a string
- * @src: source string
- * Return: pointer to a new copy of the string, or NULL if it fails
- */
 char *_strcpy(char *src);
-
-/**
- * _strlen - calculate the length of a string
- * @s: input string
- * Return: length of the string
- */
 int _strlen(char *s);
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -57,6 +45,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (new_dog);
 }
 
+/**
+ * _strcpy - copy a string
+ * @src: source string
+ * Return: pointer to a new copy of the string, or NULL if it fails
+ */
+
 char *_strcpy(char *src)
 {
 	char *dest;
@@ -75,6 +69,12 @@ char *_strcpy(char *src)
 
 	return (dest);
 }
+
+/**
+ * _strlen - calculate the length of a string
+ * @s: input string
+ * Return: length of the string
+ */
 
 int _strlen(char *s)
 {
