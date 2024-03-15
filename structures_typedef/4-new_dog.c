@@ -11,10 +11,10 @@
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
-
 {
 	int d, e, i;
 	dog_t *doggy;
+
 	d = e = 0;
 
 	while (name[d++])
