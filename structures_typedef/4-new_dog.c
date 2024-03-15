@@ -3,6 +3,49 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - calculate the length of a string
+ * @s: input string
+ * Return: length of the string
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s)
+	{
+		len++;
+		s++;
+	}
+	return (len);
+}
+
+/**
+ * _strcpy - copy a string
+ * @src: source string
+ * Return: pointer to a new copy of the string, or NULL if it fails
+ */
+
+char *_strcpy(char *src)
+{
+	char *dest;
+	int i, len;
+
+	if (src == NULL)
+		return (NULL);
+
+	len = _strlen(src);
+	dest = malloc(sizeof(char) * (len + 1));
+	if (dest == NULL)
+		return (NULL);
+
+	for (i = 0; i <= len; i++)
+		dest[i] = src[i];
+
+	return (dest);
+}
+
+/**
  * new_dog - create a new dog struct
  * @name: name of the dog
  * @age: age of the dog
@@ -39,47 +82,4 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog->age = age;
 
 	return (new_dog);
-}
-
-/**
- * _strcpy - copy a string
- * @src: source string
- * Return: pointer to a new copy of the string, or NULL if it fails
- */
-
-char *_strcpy(char *src)
-{
-	char *dest;
-	int i, len;
-
-	if (src == NULL)
-		return (NULL);
-
-	len = _strlen(src);
-	dest = malloc(sizeof(char) * (len + 1));
-	if (dest == NULL)
-		return (NULL);
-
-	for (i = 0; i <= len; i++)
-		dest[i] = src[i];
-
-	return (dest);
-}
-
-/**
- * _strlen - calculate the length of a string
- * @s: input string
- * Return: length of the string
- */
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s)
-	{
-		len++;
-		s++;
-	}
-	return (len);
 }
