@@ -1,5 +1,11 @@
 #include "function_pointers.h"
 #include <stdio.h>
+#include <ctype.h>
+
+void print_name_uppercase(char *c)
+{
+	putchar(toupper(*c));
+}
 
 /**
  * print_name - prints a name
@@ -16,5 +22,12 @@ void print_name(char *name, void (*f)(char *))
 		f(name);
 		name++;
 	}
+
 	putchar('\n');
+}
+
+int main()
+{
+	print_name("Hodor", &print_name_uppercase);
+	return(0);
 }
