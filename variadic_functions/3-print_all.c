@@ -37,18 +37,16 @@ void print_all(const char * const format, ...)
 					break;
 				case 's':
 					str = va_arg(args, char *);
-					if (!str)
-						str = "(nil)";
-					printf("%s%s", sep, str);
+					printf("%s%s", sep, (str != NULL) ? str : "(nil)");
 					break;
 				default:
-					i++;
-					continue;
+					fprintf(stderr, "Error: '%c'\n", format[i]);
+					va_end(args);
+					return;
 			}
 			sep = ", ";
 			i++;
 		}
 		printf("\n");
 		va_end(args);
-
 }
