@@ -6,6 +6,7 @@
 /**
  * print_numbers - prints numbers, followed by a new line
  * @n: number
+ * @separator: string to be printed
  * Return: printed numbers
  */
 
