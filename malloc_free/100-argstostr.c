@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int _strlen(char *s);
+
 /**
  * argstostr - concatenates all the arguments of your program
  * @av: double pointer
@@ -12,12 +14,15 @@
 
 char *argstostr(int ac, char **av)
 {
+	char *s, *t;
+	int i, y, total;
+
 	if (ac == 0 || av == NULL)
 		return (0);
 
-	for (x = 0; x < ac; x++)
+	for (i = 0; i < ac; i++)
 	{
-		for (y = 0; av[x][y] != '\0'; y++, total++)
+		for (y = 0; av[i][y] != '\0'; y++, total++)
 			;
 		total++;
 	}
@@ -29,11 +34,11 @@ char *argstostr(int ac, char **av)
 		return (0);
 
 	t = s;
-	for (x = 0; x < ac; x++)
+	for (i = 0; i < ac; i++)
 	{
-		for (y = 0; av[x][y] != '\0'; y++)
+		for (y = 0; av[i][y] != '\0'; y++)
 		{
-			*s = av[x][y];
+			*s = av[i][y];
 			s++;
 		}
 		*s = '\n';
