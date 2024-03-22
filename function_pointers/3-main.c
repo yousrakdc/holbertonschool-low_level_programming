@@ -29,4 +29,4 @@ int main(int argc, char *argv[])
 
 	printf("%i\n", oprt(a, b));
 	return (0);
-}	
+}
