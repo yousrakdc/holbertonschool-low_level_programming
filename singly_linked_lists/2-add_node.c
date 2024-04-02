@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+int _strlen(const char *s);
 /**
  * add_node -  adds a new node at the beginning of a list_t list
  * @head: pointer to the head
@@ -12,28 +13,25 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	int i, len;
-	list_t *new_node;
+	int len;
 	char *new_str;
+	list_t *new_node;
 
-	if (head == NULL || str == NULL)
-		return (NULL);
-	len = strlen(str);
-	new_node = *head;
-
-	new_str = malloc((len + 1) * sizeof(char));
-
-	if (new_node == NULL)
+	if (str == NULL || head == NULL)
 		return (NULL);
 
-	for (i = 0; str[i]; i++)
-		new_str[i] = str[i];
+	len = _strlen(str);
 
 	new_str = strdup(str);
 
 	if (new_str == NULL)
+		return (NULL);
+
+	new_node = malloc(sizeof(list_t));
+
+	if (new_node == NULL)
 	{
-		free(new_node);
+		free(new_str);
 		return (NULL);
 	}
 
