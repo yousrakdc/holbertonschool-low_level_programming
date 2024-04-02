@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stddef.h>
 
+int _strlen(const char *s);
+
 /**
  * add_node_end - adds a new node at the end of a list_t list
  * @head: pointer to the head
