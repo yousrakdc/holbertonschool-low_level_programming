@@ -1,6 +1,6 @@
 #include "main.h"
 
-#define M97 "Usage: cp file_from file_to"
+#define M97 "Usage: cp file_from file_to\n"
 #define ERR98 "Error: Can't read from file %s\n"
 #define ERR99 "Error: Can't write to %s\n"
 #define ERR100 "Error: Can't close fd %d\n"
