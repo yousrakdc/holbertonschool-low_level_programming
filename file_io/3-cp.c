@@ -10,14 +10,13 @@
  * @ac: number of arguments
  * @av: arguments
  * Return: id success, 0, else exits
- * mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
  */
-
 int main(int ac, char *av[])
 {
 	int fl1, fl2;
 	int len, cl1, cl2;
-	char buf[1024]; 
+	char buf[1024];
+	mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, M97), exit(97);
@@ -29,8 +28,9 @@ int main(int ac, char *av[])
 	if (fl1 == -1)
 		dprintf(STDERR_FILENO, ERR98, av[1]), exit(98);
 
-	fl2 = open(av[1], O_RDONLY);
-
+	fl2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, perm);
+	if (fl2 == -1)
+		dprintf(STDERR_FILENO, ERR99, av[2]), exit(99);
 	while ((len = read(fl1, buf, 1024)) > 0)
 	{
 		if (fl1 == -1 || (write(fl2, buf, len) != len))
