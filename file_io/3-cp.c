@@ -1,6 +1,6 @@
 #include "main.h"
-#include <errno.h>
 #include <sys/stat.h>
+#include <errno.h>
 #define M97 "Usage: cp file_from file_to"
 #define ERR98 "Error: Can't read from file %s\n"
 #define ERR99 "Error: Can't write to %s\n"
