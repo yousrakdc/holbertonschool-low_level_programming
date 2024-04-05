@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <errno.h>
+#include <sys/stat.h>
 #define M97 "Usage: cp file_from file_to"
 #define ERR98 "Error: Can't read from file %s\n"
 #define ERR99 "Error: Can't write to %s\n"
@@ -15,7 +16,7 @@ int main(int ac, char *av[])
 {
 	int file_from, file_to, len;
 	char buf[1024];
-	mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | O_EXCL;
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, M97), exit(97);
@@ -26,10 +27,16 @@ int main(int ac, char *av[])
 	file_from = open(av[1], O_RDONLY);
 	if (file_from == -1)
 		dprintf(STDERR_FILENO, ERR98, av[1]), exit(98);
-
-	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, perm);
+	file_to = open(av[2], O_WRONLY | O_CREAT | O_EXCL, perm);
 	if (file_to == -1)
-		dprintf(STDERR_FILENO, ERR99, av[2]), exit(99);
+	{
+		if (errno == EEXIST)
+			file_to = open(av[2], O_WRONLY);
+		if (file_to == -1)
+			dprintf(STDERR_FILENO, ERR99, av[2]), exit(99);
+		else
+			fchmod(file_to, perm);
+	}
 	while ((len = read(file_from, buf, 1024)) > 0)
 	{
 		if (file_from == -1 || (write(file_to, buf, len) != len))
@@ -43,5 +50,4 @@ int main(int ac, char *av[])
 		return (100);
 	}
 	return (0);
-
 }
