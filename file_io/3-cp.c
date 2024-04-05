@@ -13,8 +13,7 @@
  */
 int main(int ac, char *av[])
 {
-	int fl1, fl2;
-	int len, cl1, cl2;
+	int fl1, fl2, len, cl1, cl2;
 	char buf[1024];
 	mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
@@ -31,13 +30,14 @@ int main(int ac, char *av[])
 	fl2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, perm);
 	if (fl2 == -1)
 		dprintf(STDERR_FILENO, ERR99, av[2]), exit(99);
-	while ((len = read(fl1, buf, 1024)) > 0)
+	while ((len = read(fl1, buf, sizeof(buf))) > 0)
 	{
 		if (write(fl2, buf, len) != len)
 			dprintf(STDERR_FILENO, ERR99, av[2]), exit(99);
 	}
 	if (len == -1)
 		dprintf(STDERR_FILENO, ERR98, av[1]), exit(98);
+
 	cl1 = close(fl1);
 	cl2 = close(fl2);
 	if (cl1 == -1 || cl2 == -1)
