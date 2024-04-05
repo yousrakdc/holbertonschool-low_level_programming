@@ -33,7 +33,7 @@ int main(int ac, char *av[])
 		dprintf(STDERR_FILENO, ERR99, av[2]), exit(99);
 	while ((len = read(fl1, buf, 1024)) > 0)
 	{
-		if (fl1 == -1 || (write(fl2, buf, len) != len))
+		if (write(fl2, buf, len) != len)
 			dprintf(STDERR_FILENO, ERR99, av[2]), exit(99);
 	}
 	if (len == -1)
