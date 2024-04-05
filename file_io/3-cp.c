@@ -38,13 +38,13 @@ int main(int ac, char *av[])
 	}
 	if (len == -1)
 		dprintf(STDERR_FILENO, ERR98, av[1]), exit(98);
-
 	cl1 = close(fl1);
-	if (cl1 == -1)
-		dprintf(STDERR_FILENO, ERR100, fl1), exit(100);
 	cl2 = close(fl2);
-	if (cl2 == -1)
-		dprintf(STDERR_FILENO, ERR100, fl2), exit(100);
+	if (cl1 == -1 || cl2 == -1)
+	{
+		dprintf(STDERR_FILENO, ERR100, cl1 == -1 ? fl1 : fl2);
+		return (100);
+	}
 	return (0);
 
 }
