@@ -9,11 +9,11 @@
  * main - copies the content of a file in another file
  * @ac: number of arguments
  * @av: arguments
- * Return: id success, 0, else exits
+ * Return: if success, 0, else exits
  */
 int main(int ac, char *av[])
 {
-	int fl1, fl2, len, cl1, cl2;
+	int fl1, fl2, len;
 	char buf[1024];
 	mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
@@ -37,11 +37,9 @@ int main(int ac, char *av[])
 	}
 	if (len == -1)
 		dprintf(STDERR_FILENO, ERR98, av[1]), exit(98);
-	cl1 = close(fl1);
-	cl2 = close(fl2);
-	if (cl1 == -1 || cl2 == -1)
+	if (close(fl1) == -1 || close(fl2) == -1)
 	{
-		dprintf(STDERR_FILENO, ERR100, cl1 == -1 ? fl1 : fl2);
+		dprintf(STDERR_FILENO, ERR100, close(fl1) == -1 ? fl1 : fl2);
 		return (100);
 	}
 	return (0);
